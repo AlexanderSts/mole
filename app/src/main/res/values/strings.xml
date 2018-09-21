@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MoleRoid</string>
+    <string name="start">START</string>
+    <string name="restart">RESTART</string>
+    <string name="score">SCORE</string>
+    <string name="click_mole">In a Garden Far Far Away </string>
+    <string name="game_over">GAME OVER!</string>
+    <string name="lives">LIVES</string>
+</resources>

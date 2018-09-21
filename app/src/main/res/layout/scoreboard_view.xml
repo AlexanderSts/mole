@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="300dp"
+    android:layout_height="550dp"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <TextView
+                android:id="@+id/score_counter_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="18dp"
+                android:text="@string/click_mole"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="15sp"
+                android:layout_marginBottom="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/score_counter"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/score_counter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/score"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/score_counter"
+                app:layout_constraintEnd_toStartOf="@+id/lives_counter_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/score_counter_top"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/score_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toTopOf="@+id/gameover"
+                app:layout_constraintEnd_toEndOf="@+id/score_counter_title"
+                app:layout_constraintStart_toStartOf="@+id/score_counter_title"
+                app:layout_constraintTop_toBottomOf="@+id/score_counter_title"
+                tools:text="0" />
+
+            <TextView
+                android:id="@+id/lives_counter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lives"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/score_counter_title"
+                app:layout_constraintBottom_toTopOf="@+id/life_counter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/score_counter_title"
+                app:layout_constraintTop_toTopOf="@+id/score_counter_top"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/life_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="@+id/lives_counter_title"
+                app:layout_constraintStart_toStartOf="@+id/lives_counter_title"
+                app:layout_constraintTop_toBottomOf="@+id/lives_counter_title"
+                tools:text="3" />
+
+            <TextView
+                android:id="@+id/gameover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/game_over"
+                android:textColor="#F00"
+                android:textSize="32sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@color/colorGround">
+
+
+        </RelativeLayout>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/start_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/colorPrimaryLight"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="@string/start"
+            android:textColor="@color/colorTextIcon"
+            android:textSize="42sp"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
